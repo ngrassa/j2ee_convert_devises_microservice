@@ -48,7 +48,7 @@ Sans `SERVICES`, le script reconstruit et relance tout le stack.
 
 ## Tests rapides
 - Taux: `curl http://localhost:9081/api/rates`
-- Conversion: `curl http://localhost:9082/api/convert?amount=100&from=EUR&to=USD"`
+- Conversion: `curl http://localhost:9082/api/convert?amount=100&from=EUR&to=USD`
 
 ## Nettoyage
 ```bash
