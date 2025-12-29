@@ -57,5 +57,5 @@ docker compose ps
 
 echo "Accès :"
 echo "- Frontend : http://localhost:9080"
-echo "- Converter API : http://localhost:9082/api/convert?amount=100&to=EUR"
+echo "- Converter API :http://localhost:9082/api/convert?amount=100&from=EUR&to=USD"
 echo "- Rates API : http://localhost:9081/api/rates"
