@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if ! command -v mvn >/dev/null 2>&1; then
+  echo "Apache Maven is required but not found in PATH." >&2
+  exit 1
+fi
+
+mvn "$@"

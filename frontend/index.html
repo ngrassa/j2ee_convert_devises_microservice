@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TND Currency Converter</title>
+  <style>
+    /* Fallback rapide si styles.css est bloqué par le cache */
+    body { margin:0; font-family:"Segoe UI",Arial,sans-serif; background:#0a1020; color:#f7f9ff; }
+  </style>
+  <link rel="stylesheet" href="styles.css?v=3">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Currency Converter</div>
+    <div class="tagline">Convertissez entre TND, EUR, USD, GBP, JPY, CAD</div>
+  </header>
+
+  <main class="layout">
+    <section class="card hero">
+      <div class="hero-header">
+        <div class="title-block">
+          <h1>Convertisseur instantané</h1>
+          <p class="muted">TND, EUR, USD, GBP, JPY, CAD — choisissez vos devises, inversez en un clic.</p>
+        </div>
+        <button id="swap" type="button" class="ghost">↕ Swap</button>
+      </div>
+      <form id="convert-form" class="form">
+        <label class="stacked">
+          Montant
+          <input type="number" id="amount" name="amount" min="0" step="0.01" value="100" required>
+        </label>
+        <div class="grid">
+          <label class="stacked">
+            De
+            <select id="from" name="from" required>
+              <option value="TND">Dinar Tunisien (TND)</option>
+              <option value="EUR">Euro (EUR)</option>
+              <option value="USD">US Dollar (USD)</option>
+              <option value="GBP">British Pound (GBP)</option>
+              <option value="JPY">Japanese Yen (JPY)</option>
+              <option value="CAD">Canadian Dollar (CAD)</option>
+            </select>
+          </label>
+          <label class="stacked">
+            Vers
+            <select id="to" name="to" required>
+              <option value="EUR">Euro (EUR)</option>
+              <option value="USD">US Dollar (USD)</option>
+              <option value="GBP">British Pound (GBP)</option>
+              <option value="JPY">Japanese Yen (JPY)</option>
+              <option value="CAD">Canadian Dollar (CAD)</option>
+              <option value="TND">Dinar Tunisien (TND)</option>
+            </select>
+          </label>
+        </div>
+        <div class="helper">
+          <span class="chip">Tomcat 9</span>
+          <span class="chip">JAX-RS</span>
+          <span class="chip">Docker</span>
+        </div>
+        <button type="submit" class="primary">Convertir</button>
+      </form>
+      <div id="result" class="result hidden"></div>
+      <div id="error" class="error hidden"></div>
+    </section>
+
+    <section class="card info">
+      <h2>Conseils d’usage</h2>
+      <ul>
+        <li>Choisissez la devise source et cible puis utilisez « Swap » pour inverser.</li>
+        <li>Les services sont stateless : chaque appel refait le calcul.</li>
+        <li>En cas de coupure réseau, un message clair apparaît sans recharger la page.</li>
+      </ul>
+      <p class="muted">Astuce : ouvrez l’onglet Réseau dans DevTools pour suivre les appels REST.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Démo microservices Tomcat 9 · JAX-RS · Docker Compose. © Professeur Nordine GRASSA
+  </footer>
+
+  <script src="script.js?v=3"></script>
+</body>
+</html>

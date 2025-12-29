@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  rates-service:
+    build: ./rates-service
+    image: tnd/rates-service:latest
+    ports:
+      - "9081:8080"
+
+  converter-service:
+    build: ./converter-service
+    image: tnd/converter-service:latest
+    ports:
+      - "9082:8080"
+    environment:
+      RATES_SERVICE_URL: http://rates-service:8080/api
+      EXTERNAL_RATE_API: https://api.exchangerate.host/latest
+
+  frontend:
+    build: ./frontend
+    image: tnd/frontend:latest
+    ports:
+      - "9080:80"
+    environment:
+      CONVERTER_API_URL: http://converter-service:8080

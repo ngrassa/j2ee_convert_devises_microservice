@@ -1,0 +1,5 @@
+/home/osboxes/j2ee_convert_devises_microservice/rates-service/src/main/java/com/example/rates/AppConfig.java
+/home/osboxes/j2ee_convert_devises_microservice/rates-service/src/main/java/com/example/rates/CorsFilter.java
+/home/osboxes/j2ee_convert_devises_microservice/rates-service/src/main/java/com/example/rates/HealthResource.java
+/home/osboxes/j2ee_convert_devises_microservice/rates-service/src/main/java/com/example/rates/Rate.java
+/home/osboxes/j2ee_convert_devises_microservice/rates-service/src/main/java/com/example/rates/RateResource.java

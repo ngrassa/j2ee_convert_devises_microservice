@@ -1,0 +1,5 @@
+/home/osboxes/j2ee_convert_devises_microservice/converter-service/src/main/java/com/example/converter/AppConfig.java
+/home/osboxes/j2ee_convert_devises_microservice/converter-service/src/main/java/com/example/converter/ConvertResource.java
+/home/osboxes/j2ee_convert_devises_microservice/converter-service/src/main/java/com/example/converter/CorsFilter.java
+/home/osboxes/j2ee_convert_devises_microservice/converter-service/src/main/java/com/example/converter/HealthResource.java
+/home/osboxes/j2ee_convert_devises_microservice/converter-service/src/main/java/com/example/converter/Rate.java

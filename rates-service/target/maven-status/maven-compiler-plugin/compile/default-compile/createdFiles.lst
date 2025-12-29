@@ -1,0 +1,5 @@
+com/example/rates/HealthResource.class
+com/example/rates/Rate.class
+com/example/rates/CorsFilter.class
+com/example/rates/AppConfig.class
+com/example/rates/RateResource.class
