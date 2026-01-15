@@ -15,7 +15,7 @@ Projet pédagogique J2EE montrant une architecture microservices pour convertir 
 
 ## Démarrage rapide
 ```bash
-./setup.sh            # build + docker compose up -d
+ INSTALL_PREREQS=1 ./setup.sh            # build + docker compose up -d
 ```
 Puis ouvrir http://localhost:9080.
 
