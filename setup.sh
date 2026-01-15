@@ -14,11 +14,11 @@ install_prereqs() {
   fi
 
   echo "Mise à jour des paquets..."
-  sudo apt-get update -y
+  sudo apt update -y
 
   echo "Installation de Docker, plugin Compose, Java 21 et Maven..."
   sudo apt install -y docker.io  openjdk-21-jdk maven
-  sudo apt -y  docker-compose-plugin
+  sudo apt install -y  docker-compose-plugin
 
   echo "Activation de Docker..."
   sudo systemctl enable docker
