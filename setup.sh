@@ -17,8 +17,8 @@ install_prereqs() {
   sudo apt update -y
 
   echo "Installation de Docker, plugin Compose, Java 21 et Maven..."
-  sudo apt install -y docker.io  openjdk-21-jdk maven
-  sudo apt install -y  docker-compose-plugin
+  sudo apt install -y docker.io  docker-compose openjdk-21-jdk maven
+   
 
   echo "Activation de Docker..."
   sudo systemctl enable docker
