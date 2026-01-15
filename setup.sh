@@ -8,7 +8,7 @@ set -euo pipefail
 #   SERVICES="frontend converter-service" ./setup.sh
 
 install_prereqs() {
-  if ! command -v apt-get >/dev/null 2>&1; then
+  if ! command -v apt >/dev/null 2>&1; then
     echo "Installation auto seulement pour Ubuntu/Debian (apt-get)."
     return
   fi
@@ -47,14 +47,14 @@ if [[ -n "$TARGETS" ]]; then
   docker compose up -d $TARGETS
 else
   echo "Stopping and removing previous containers..."
-  docker compose down --remove-orphans || true
+  docker-compose down --remove-orphans || true
   echo "Building all services from scratch..."
-  docker compose build --no-cache --pull
+  docker-compose build --no-cache --pull
   echo "Starting stack..."
-  docker compose up -d
+  docker-compose up -d
 fi
 
-docker compose ps
+docker-compose ps
 
 echo "Accès :"
 echo "- Frontend : http://localhost:9080"
